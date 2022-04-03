@@ -1,7 +1,7 @@
 # Olimexino-85 CO2 monitor with OLED display (MH-Z19B sensor)
 
 ### Hardware list:
-- [Olimexino-85BC](https://github.com/OLIMEX/OLIMEXINO-85) (ATTINY85 based Digispark clone) with 5V jumper setting
+- [Olimexino-85BC](https://github.com/OLIMEX/OLIMEXINO-85) (ATTINY85-based Digispark clone) with 5V jumper setting
 - 0.96 inch 128x64 I2C SSD1306 OLED display
 - MH-Z19B infrared CO2 sensor (0-5000PPM)
 
@@ -18,5 +18,5 @@ I had to reimplement the display part as I had noise and other artefacts on my 1
 
 ``#define USI_BUF_SIZE 30 //!< bytes in message buffer``
 
-As the libraries require more space, **the display now shows just the CO2 PPM level ina a centered 16x24px font and nothing else**. The sketch requires 6010 out of 6012 bytes available on the Digispark clones.
+As the libraries require more space, **the display now shows just the CO2 PPM level in a centered 16x24px font and nothing else**. The sketch requires 6010 out of 6012 bytes available on the Digispark clones.
 
