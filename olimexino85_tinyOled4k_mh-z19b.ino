@@ -1,6 +1,4 @@
-
 #include <TinyWireM.h>
-
 #include <Tiny4kOLED.h>
 #include "font16x24.h"
 
@@ -23,7 +21,6 @@ void setup() {
   oled.setFont(FONT16X24);
   oled.clear();
   oled.on();
-
   mySerial.begin(9600);
 }
 
@@ -71,11 +68,8 @@ void loop() {
   }
 
   if (received) {
-
     if (validateCo2Response()) {
-
       unsigned int ppm = (256 * ls) + hs;
-
       //New text at center position
       if (oldPPM != ppm) {
         if (ppm > 999) {
@@ -86,13 +80,11 @@ void loop() {
           }
           oled.setCursor(40, 0);
         }
-
         oldPPM = ppm;
         oled.print(ppm);
       }
     }
   }
-
   delay(10000);
 }
 
@@ -104,8 +96,5 @@ bool validateCo2Response() {
   crc = 256 - crc;
   //crc++;
   bool valid = co2SensorResponse[0] == 0xFF && co2SensorResponse[1] == 0x86 && co2SensorResponse[8] == crc;
-  /* if (!valid) {
-    Serial.println("CRC error: " + String(crc) + "/" + String(co2SensorResponse[8]));
-    } */
   return valid;
 }
