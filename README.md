@@ -20,4 +20,4 @@ I had to reimplement the display part as I had noise and other artefacts on my 1
 
 As the libraries require more space, **the display now shows just the CO2 PPM level in a centered 16x24px font and nothing else**. The sketch requires 6010 out of 6012 bytes available on the Digispark clones.
 
-The monitor can be made portable, using 3 AAA batteries.
+The monitor can be made portable, using 3 AAA batteries (inspired by [this](http://www.ihormelnyk.com/mh-z19_co2_meter)).
