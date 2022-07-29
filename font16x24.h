@@ -1,8 +1,5 @@
-// BigFont.c (C)2010 by Henning Karlsen
-// Font Size	: 16x16
-// Memory usage	: 3040 bytes
-// # characters	: 95
-// 32*95
+// Font Size	: 16x24
+// # characters	: 10
 
 #include <avr/pgmspace.h>
 
